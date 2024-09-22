@@ -124,10 +124,10 @@ def save_bill(room_cost, service_cost, total_cost, due_amount):
         
         # Add letterhead
         pdf.set_font("Arial", 'B', 16)
-        pdf.cell(200, 10, "Hotel Sunshine", 0, 1, 'C')
+        pdf.cell(200, 10, "Your Hotel Name", 0, 1, 'C')
         pdf.set_font("Arial", '', 12)
-        pdf.cell(200, 10, "123 Sunshine Street, Dhaka, Bangladesh", 0, 1, 'C')
-        pdf.cell(200, 10, "Phone: +880 123-4567890", 0, 1, 'C')
+        pdf.cell(200, 10, "Your Hotel Address", 0, 1, 'C')
+        pdf.cell(200, 10, "Phone: +xx-xxxxxxx", 0, 1, 'C')
         pdf.cell(200, 10, "----------------------------------------------", 0, 1, 'C')
         
         # Customer details
@@ -189,7 +189,7 @@ tk.Label(root, text="Additional Services", font=("Arial", 14)).pack(pady=5)
 for service, price in service_prices.items():
     tk.Checkbutton(
         root,
-        text=f"{service} ({price} BDT)",
+        text=f"{service} ({price} USD)",
         variable=selected_services[service]
     ).pack(anchor="w")
 
