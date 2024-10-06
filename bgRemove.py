@@ -1,4 +1,4 @@
-# pip install rembg, PIL, tkinter
+# install rembg, PIL, tkinter using pip
 
 from rembg import remove
 from PIL import Image
